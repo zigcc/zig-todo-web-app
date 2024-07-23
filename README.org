@@ -1,0 +1,11 @@
+* TodoAPP
+A simple TODO web app in Zig!
+
+* Backend endpoints
+| Route                  | Function        | Content-Type |
+|------------------------+-----------------+--------------|
+| =GET /=                | index page      | html         |
+| =POST /api/todos=      | create new todo | json         |
+| =PUT /api/todos/:id=   | update todo     | json         |
+| =DELETE /api/todos/id= | delete todo     | json         |
+|                        |                 |              |
