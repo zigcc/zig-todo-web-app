@@ -6,6 +6,7 @@ A simple TODO web app in Zig!
 |------------------------+-----------------+--------------|
 | =GET /=                | index page      | html         |
 | =POST /api/todos=      | create new todo | json         |
+| =GET /api/todos/:id=   | get todo        | json         |
 | =PUT /api/todos/:id=   | update todo     | json         |
 | =DELETE /api/todos/id= | delete todo     | json         |
 |                        |                 |              |

@@ -40,7 +40,7 @@ pub fn post(request: *jetzig.Request, data: *jetzig.Data) !jetzig.View {
     return request.render(.ok);
 }
 
-/// Update a TODO
+/// GET a TODO
 pub fn get(id: []const u8, request: *jetzig.Request, data: *jetzig.Data) !jetzig.View {
     std.debug.print("get {s}!\n", .{id});
     var root = try data.root(.object);
@@ -66,6 +66,8 @@ pub fn put(id: []const u8, request: *jetzig.Request, data: *jetzig.Data) !jetzig
         defer json_body.deinit();
 
         try todo.put("content", json_body.value.content);
+        const now: i128 = @intCast(std.time.timestamp());
+        try todo.put("updated_at", data.integer(now));
         try request.store.put(id, todo);
         try root.put("ok", data.boolean(true));
     } else {
