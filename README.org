@@ -1,5 +1,11 @@
 * TodoAPP
-A simple TODO web app in Zig!
+A Single-page TODO app in Zig!
+
+* How to use
+** Jetzig-app
+- Download jetzig at https://www.jetzig.dev/downloads.html
+- Run =jetzig server= in =jetzig-app= directory
+- Open [[http://localhost:8080/][http://localhost:8080/]] in browser to explore!
 
 * Backend endpoints
 | Route                  | Function        | Content-Type |
@@ -9,4 +15,3 @@ A simple TODO web app in Zig!
 | =GET /api/todos/:id=   | get todo        | json         |
 | =PUT /api/todos/:id=   | update todo     | json         |
 | =DELETE /api/todos/id= | delete todo     | json         |
-|                        |                 |              |

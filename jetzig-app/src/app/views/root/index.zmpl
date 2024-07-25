@@ -9,25 +9,34 @@
 
 <body>
   <div class="container">
-    <div class="row mb-3">
-      <label for="todo-title" class="form-label">Title</label>
-      <input class="form-control" id="todo-title"/>
-    </div>
-    <div class="row mb-3">
-      <label for="todo-content" class="form-label">Content</label>
-      <textarea class="form-control" id="todo-content"></textarea>
-    </div>
-    <div class="row mb-3">
-      <button type="button" id="btn-submit" class="btn btn-primary">Submit</button>
+    <div class="card">
+      <h5 class="card-header">New</h5>
+      <div class="card-body">
+        <div class="row mb-3">
+          <label for="todo-title" class="form-label">Title</label>
+          <input class="form-control" id="todo-title"/>
+        </div>
+        <div class="row mb-3">
+          <label for="todo-content" class="form-label">Content</label>
+          <textarea class="form-control" id="todo-content"></textarea>
+        </div>
+        <div class="row mb-3">
+          <button type="button" id="btn-submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
     </div>
 
     <div class="card">
+      <h5 class="card-header">Search</h5>
       <div class="card-body">
-        <div class="col-sm-4">
+        <div class="row">
           <input type="text" class="form-control" placeholder="Title to search" id='search-title' aria-label="City">
         </div>
-        <div class="col-sm">
+        <div class="row">
           <button type="button" id="btn-search" class="btn btn-primary">Search</button>
+        </div>
+        <div class="row">
+          <textarea disabled id="search-result"></textarea>
         </div>
       </div>
     </div>

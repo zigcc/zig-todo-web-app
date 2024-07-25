@@ -27,6 +27,7 @@ async function onWindowLoad() {
   });
 
   const search_title = document.getElementById('search-title');
+  const search_result = document.getElementById('search-result');
   document.getElementById('btn-search').addEventListener('click', async () => {
     console.log('btn-search clicked');
     const value = search_title.value;
@@ -43,9 +44,9 @@ async function onWindowLoad() {
     }
     const r = await resp.json();
     if(r.found) {
-      content.value = r.data.content;
+      search_result.innerHTML = r.data.content;
     } else {
-      alert('Todo not found');
+      search_result.innerHTML = 'Todo not found';
     }
   });
 
